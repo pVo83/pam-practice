@@ -1,0 +1,115 @@
+:root {
+  // ─── Шрифты ───────────────────────────────────────────────────────────────
+  --ff-primary: "Montserrat", sans-serif;
+  --ff-secondary: "", sans-serif;
+  --ff-accent: "", sans-serif;
+
+  // ─── Контейнер ────────────────────────────────────────────────────────────
+  --content-width: 1280px;
+  --container-offset: 20px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // ─── Палитра (тон как vue-practice: Vue green + Vue dark) ─────────────────
+  --white: #fff;
+  --black: #1d1d1f;
+  --text: #35495e;
+  --primary: #42b883;
+  --error: #e53935;
+  --offline: #b1b1b1;
+  --warning: #e6a817;
+  --success: #369870;
+  --purple: #7c3aed;
+  --bg-page: #fafbfc;
+  --light-blue: #f3faf7;
+  --gray-blue50: #f3faf7;
+  --gray-blue100: rgb(66 184 131 / 12%);
+  --gray-blue150: color-mix(in srgb, #42b883 10%, #f5f8fa);
+  --gray-blue200: color-mix(in srgb, #42b883 8%, #e6ebf0);
+  --gray50: #f5f8fa;
+  --gray100: #f0f3f5;
+  --gray150: #e6ebf0;
+  --gray200: #d7dee5;
+  --gray250: #b7b9bd;
+
+  // ─── Семантика (новый UI и dark) ──────────────────────────────────────────
+  --bg-elevated: #fff;
+  --bg-muted: #f5f8fa;
+  --text-strong: #35495e;
+  --border: #e6ebf0;
+  --control-disabled-bg: #f5f8fa;
+  --control-disabled-border: #e6ebf0;
+  --control-disabled-text: #6c757d;
+  --overlay-scrim: rgb(53 73 94 / 35%);
+
+  // ─── Тени ─────────────────────────────────────────────────────────────────
+  --shadow-sm: 0 2px 6px rgb(53 73 94 / 8%);
+  --shadow-md: 0 8px 24px rgb(53 73 94 / 12%);
+  --shadow-lg: 0 16px 40px rgb(53 73 94 / 16%);
+  --shadow-dual-sm: 3px 3px 8px rgb(53 73 94 / 7%), -3px -3px 8px #fff;
+  --shadow-dual: 5px 5px 10px rgb(53 73 94 / 7%), -5px -5px 10px #fff;
+  --shadow-dual-small: 5px 5px 10px rgb(53 73 94 / 7%), -2px -2px 6px #fff;
+
+  // ─── Fluid шрифты ─────────────────────────────────────────────────────────
+  --fs-10: 0.625rem;
+  --fs-12: 0.75rem;
+  --fs-14: 0.875rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-22: 1.375rem;
+  --fs-24: 1.5rem;
+  --fs-26: 1.625rem;
+  --fs-28: 1.75rem;
+  --fs-30: 1.875rem;
+  --fs-116: 7.25rem;
+
+  // ─── Радиусы ──────────────────────────────────────────────────────────────
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-xxl: 24px;
+  --radius-full: 9999px;
+
+  // ─── Переходы ─────────────────────────────────────────────────────────────
+  --trs35: 0.35s ease-in-out;
+
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --text: #9aaaba;
+  --primary: #42d392;
+  --error: #ff5c5c;
+  --offline: #6b7280;
+  --warning: #ffb020;
+  --success: #3dd68c;
+  --purple: #9b6cff;
+  --bg-page: #0f1215;
+  --light-blue: color-mix(in srgb, #42b883 14%, #141a17);
+  --gray-blue50: color-mix(in srgb, #42b883 12%, #1a211d);
+  --gray-blue100: color-mix(in srgb, #42b883 10%, #202820);
+  --gray-blue150: color-mix(in srgb, #42b883 8%, #27302a);
+  --gray-blue200: color-mix(in srgb, #42b883 7%, #2f3a32);
+  --gray50: #1e2428;
+  --gray100: #262d32;
+  --gray150: #313940;
+  --gray200: #3c464e;
+  --gray250: #8b93a7;
+  --bg-elevated: #171b1e;
+  --bg-muted: #1e2428;
+  --text-strong: #eef1f5;
+  --border: #313940;
+  --control-disabled-bg: #1e2428;
+  --control-disabled-border: #313940;
+  --control-disabled-text: #6f788d;
+  --overlay-scrim: rgb(0 0 0 / 45%);
+  --shadow-sm: 0 2px 8px rgb(0 0 0 / 35%);
+  --shadow-md: 0 8px 24px rgb(0 0 0 / 40%);
+  --shadow-lg: 0 16px 40px rgb(0 0 0 / 45%);
+  --shadow-dual-sm: 0 2px 10px rgb(0 0 0 / 34%);
+  --shadow-dual: 0 4px 16px rgb(0 0 0 / 40%);
+  --shadow-dual-small: 0 2px 10px rgb(0 0 0 / 35%);
+}

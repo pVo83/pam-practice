@@ -1,0 +1,38 @@
+export const cards = [
+  {
+    id: 1,
+    label: "Активные сессии",
+    value: "1",
+    hint: "SSH 1 · RDP 0 · DB 0",
+    spark: [1, 1, 2, 1, 1, 1, 1],
+    icon: "monitor",
+    tone: "success",
+  },
+  {
+    id: 2,
+    label: "Запросы доступа",
+    value: "0",
+    hint: "Дольше часа: 0",
+    spark: [2, 1, 3, 0, 1, 0, 0],
+    icon: "circle-check",
+    tone: "muted",
+  },
+  {
+    id: 3,
+    label: "Проблемные ресурсы",
+    value: "3",
+    hint: "Офлайн 2 · Обслуживание 1",
+    spark: [2, 2, 3, 3, 3, 3, 3],
+    icon: "circle-alert",
+    tone: "error",
+  },
+  {
+    id: 4,
+    label: "Аудит",
+    value: "18",
+    hint: "Сегодня 5 · ошибок 2",
+    spark: [2, 4, 3, 5, 2, 4, 3],
+    icon: "clipboard-list",
+    tone: "info",
+  },
+]

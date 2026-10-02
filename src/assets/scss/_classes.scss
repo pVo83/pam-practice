@@ -1,0 +1,480 @@
+/* ------------------- */
+
+/* grid                */
+
+/* ------------------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.col_2 {
+  grid-column: 2 span;
+}
+
+.col_3 {
+  grid-column: 3 span;
+}
+
+.col_4 {
+  grid-column: 4 span;
+}
+
+.col_5 {
+  grid-column: 5 span;
+}
+
+.col_6 {
+  grid-column: 6 span;
+}
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+
+.col-span-4 {
+  grid-column: span 4 / span 4;
+}
+
+.col-span-5 {
+  grid-column: span 5 / span 5;
+}
+
+.col-span-6 {
+  grid-column: span 6 / span 6;
+}
+
+/* ------------------- */
+
+/* flex                */
+
+/* ------------------- */
+
+.in-flex {
+  display: inline-flex;
+}
+
+.flex {
+  &-start {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &-center {
+    display: flex;
+    align-items: center;
+  }
+
+  &-end {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &-line {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &-row-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-col-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-wrap {
+    flex-wrap: wrap;
+  }
+
+  &-nowrap {
+    flex-wrap: nowrap;
+  }
+}
+
+/* ------------------- */
+
+/* justify             */
+
+/* ------------------- */
+
+.just {
+  &-bet {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-ctr {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-end {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &-start {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+/* ------------------- */
+
+/* text                */
+
+/* ------------------- */
+
+.txt-center {
+  text-align: center;
+}
+
+/* ------------------- */
+
+/* block               */
+
+/* ------------------- */
+
+.block {
+  display: block;
+}
+
+.in-block {
+  display: inline-block;
+}
+
+/* ------------------- */
+
+/* gap                 */
+
+/* ------------------- */
+
+.gap5 {
+  gap: 0.3125rem;
+}
+
+.gap10 {
+  gap: 0.625rem;
+}
+
+.gap15 {
+  gap: 0.9375rem;
+}
+
+.gap16 {
+  gap: 0.9375rem;
+}
+
+.gap20 {
+  gap: 1.25rem;
+}
+
+.gap25 {
+  gap: 1.5625rem;
+}
+
+.gap30 {
+  gap: 1.875rem;
+}
+
+.gap35 {
+  gap: 2.1875rem;
+}
+
+.gap40 {
+  gap: 2.5rem;
+}
+
+.gap45 {
+  gap: 2.8125rem;
+}
+
+.gap50 {
+  gap: 3.125rem;
+}
+
+/* ======================= */
+
+/* Gap                     */
+
+/* ======================= */
+
+// Базовый шаг (можно менять)
+$gap-base-step: 0.25rem; // 4px (стандартный шаг)
+
+// Генерация классов .gap-0, .gap-1, ..., .gap-100
+@for $i from 0 through 100 {
+  .gap-#{$i} {
+    gap: #{$i * $gap-base-step};
+  }
+
+  // Опционально: gap для строк и колонок в grid
+  .gap-row-#{$i} {
+    row-gap: #{$i * $gap-base-step};
+  }
+  .gap-col-#{$i} {
+    column-gap: #{$i * $gap-base-step};
+  }
+}
+
+// если нужны точные gap px для строк и колонок в grid
+@for $i from 0 through 100 {
+  .gap-row-#{$i}px {
+    row-gap: #{$i}px;
+  }
+  .gap-col-#{$i}px {
+    column-gap: #{$i}px;
+  }
+}
+
+// если нужны точные px
+@for $i from 0 through 100 {
+  .gap-#{$i}px {
+    gap: #{$i}px;
+  }
+}
+
+/* ======================= */
+
+/* Margin                  */
+
+/* ======================= */
+
+.mrg-l-auto {
+  margin-left: auto;
+}
+
+.mrg-r-auto {
+  margin-right: auto;
+}
+
+.mrg-inline {
+  margin-inline: auto;
+}
+
+.mrg-block {
+  margin-inline: auto;
+}
+
+.mrg10 {
+  margin-inline: 0.625rem;
+}
+
+.mrg20 {
+  margin-inline: 1.25rem;
+}
+
+.mrg30 {
+  margin-inline: 1.875rem;
+}
+
+.mrg35 {
+  margin-inline: 2.1875rem;
+}
+
+.mrg40 {
+  margin-inline: 2.5rem;
+}
+
+.mrg45 {
+  margin-inline: 2.8125rem;
+}
+
+.mrg50 {
+  margin-inline: 3.125rem;
+}
+
+/* ------------------- */
+
+/* position            */
+
+/* ------------------- */
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+/* =================================== */
+
+/* Spacing Utilities (Margin/Padding)  */
+
+/* =================================== */
+
+// Базовые настройки
+$spacing-base-step: 0.25rem; // Основной шаг (4px)
+$spacing-px-step: 1px; // Шаг для пикселей
+$spacing-max-steps: 50; // Максимальный множитель (50 * 4px = 200px)
+$spacing-px-max-steps: 100; // Максимальный множитель для пикселей (100px)
+
+// Направления
+$spacing-directions: (
+  "": "all",
+  // .m-1 (margin: 0.25rem)
+  "t": "top",
+  // .mt-1 (margin-top)
+  "r": "right",
+  // .mr-1
+  "b": "bottom",
+  // .mb-1
+  "l": "left",
+  // .ml-1
+  "x": "inline",
+  // .mx-1 (left+right)
+  "y": "block", // .my-1 (top+bottom)
+);
+
+/* ======================= */
+
+/* Margin (rem и px)       */
+
+/* ======================= */
+@each $prefix, $property in $spacing-directions {
+  // REM-значения (основные)
+  @for $i from 0 through $spacing-max-steps {
+    .m#{$prefix}-#{$i} {
+      @if $prefix == "" {
+        margin: #{$i * $spacing-base-step};
+      } @else if $prefix == "x" {
+        margin-right: #{$i * $spacing-base-step};
+        margin-left: #{$i * $spacing-base-step};
+      } @else if $prefix == "y" {
+        margin-top: #{$i * $spacing-base-step};
+        margin-bottom: #{$i * $spacing-base-step};
+      } @else {
+        margin-#{$property}: #{$i * $spacing-base-step};
+      }
+    }
+  }
+
+  // PX-значения (дополнительные)
+  @for $i from 0 through $spacing-px-max-steps {
+    .m#{$prefix}-#{$i}px {
+      @if $prefix == "" {
+        margin: #{$i}px;
+      } @else if $prefix == "x" {
+        margin-right: #{$i}px;
+        margin-left: #{$i}px;
+      } @else if $prefix == "y" {
+        margin-top: #{$i}px;
+        margin-bottom: #{$i}px;
+      } @else if $prefix == "t" {
+        margin-top: #{$i}px;
+      } @else if $prefix == "r" {
+        margin-right: #{$i}px;
+      } @else if $prefix == "b" {
+        margin-bottom: #{$i}px;
+      } @else if $prefix == "l" {
+        margin-left: #{$i}px;
+      } @else {
+        margin-#{$property}: #{$i}px;
+      }
+    }
+  }
+}
+
+/* Специальные margin-классы */
+.m-auto {
+  margin: auto;
+}
+
+.mx-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.mx-auto-l {
+  margin-left: auto;
+}
+
+.mx-auto-r {
+  margin-right: auto;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* Отрицательные margin (rem и px) */
+@for $i from 1 through 10 {
+  .-m#{$i} {
+    margin: -#{$i * $spacing-base-step};
+  }
+  .-m#{$i}px {
+    margin: -#{$i}px;
+  }
+  .-mx#{$i} {
+    margin-right: -#{$i * $spacing-base-step};
+    margin-left: -#{$i * $spacing-base-step};
+  }
+  .-mx#{$i}px {
+    margin-right: -#{$i}px;
+    margin-left: -#{$i}px;
+  }
+
+  /* ... аналогично для других направлений (t, r, b, l, y) ... */
+}
+
+/* ======================= */
+
+/* Padding (rem и px)      */
+
+/* ======================= */
+@each $prefix, $property in $spacing-directions {
+  // REM-значения (основные)
+  @for $i from 0 through $spacing-max-steps {
+    .p#{$prefix}-#{$i} {
+      @if $prefix == "" {
+        padding: #{$i * $spacing-base-step};
+      } @else if $prefix == "x" {
+        padding-right: #{$i * $spacing-base-step};
+        padding-left: #{$i * $spacing-base-step};
+      } @else if $prefix == "y" {
+        padding-top: #{$i * $spacing-base-step};
+        padding-bottom: #{$i * $spacing-base-step};
+      } @else {
+        padding-#{$property}: #{$i * $spacing-base-step};
+      }
+    }
+  }
+
+  // PX-значения (дополнительные)
+  @for $i from 0 through $spacing-px-max-steps {
+    .p#{$prefix}-#{$i}px {
+      @if $prefix == "" {
+        padding: #{$i}px;
+      } @else if $prefix == "x" {
+        padding-right: #{$i}px;
+        padding-left: #{$i}px;
+      } @else if $prefix == "y" {
+        padding-top: #{$i}px;
+        padding-bottom: #{$i}px;
+      } @else {
+        padding-#{$property}: #{$i}px;
+      }
+    }
+  }
+}
