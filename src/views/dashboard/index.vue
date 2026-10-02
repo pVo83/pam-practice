@@ -5,6 +5,7 @@
     <div class="dashboard__mid">
       <div class="dashboard__mid-left">
         <Panel
+          class="dashboard__mid-item"
           title="Сигналы"
           description="Учётки, MFA, ошибки сессий"
           :more="moreCount(signalItems)"
@@ -14,11 +15,16 @@
         </Panel>
 
         <Panel
+          class="dashboard__mid-item"
           title="Ресурсы"
-          description="Online 9 · Offline 2 · Maintenance 1"
           :more="moreCount(resourceItems)"
           to="/"
         >
+          <template #description>
+            <span class="dashboard__status dashboard__status--error">Офлайн 2</span>
+            ·
+            <span class="dashboard__status dashboard__status--warning">Обслуживание 1</span>
+          </template>
           <DashList :items="resourceItems" empty-text="Проблемных ресурсов нет" ok />
         </Panel>
       </div>
@@ -91,7 +97,22 @@ import {
     gap: 12px;
     min-width: 0;
     overflow-x: auto;
+    scroll-snap-type: x mandatory;
     scrollbar-width: thin;
+  }
+
+  &__mid-item {
+    scroll-snap-align: start;
+  }
+
+  &__status {
+    &--error {
+      color: var(--error);
+    }
+
+    &--warning {
+      color: var(--warning);
+    }
   }
 
   &__bottom {

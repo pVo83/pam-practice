@@ -14,7 +14,9 @@
           </RouterLink>
         </div>
       </div>
-      <p v-if="description" class="panel__description">{{ description }}</p>
+      <p v-if="$slots.description || description" class="panel__description">
+        <slot name="description">{{ description }}</slot>
+      </p>
     </header>
     <div class="panel__body">
       <slot />

@@ -42,27 +42,24 @@ export const signalItems = [
 export const resourceItems = [
   {
     id: 1,
-    title: "db-prod-01",
+    title: "db-prod-01-pg",
     meta: "10.0.1.14",
     icon: "server",
     tone: "error",
-    status: "Офлайн",
   },
   {
     id: 2,
-    title: "jump-gw",
+    title: "jump-gw-ext",
     meta: "10.0.2.8",
     icon: "server",
     tone: "error",
-    status: "Офлайн",
   },
   {
     id: 3,
-    title: "win-rdp-finance",
+    title: "win-rdp-finance-01",
     meta: "10.0.3.21",
     icon: "server",
     tone: "warning",
-    status: "Обслуживание",
   },
 ]
 
