@@ -2,6 +2,11 @@ import { createRouter, createWebHashHistory } from "vue-router"
 
 import dashboardRoutes from "@/api/dashboard/routes"
 import employeeRoutes from "@/api/employees/routes"
+import resourcesRoutes from "@/api/resources/routes"
+import accountsRoutes from "@/api/accounts/router"
+import rolesRoutes from "@/api/roles/router"
+import accessRequestsRoutes from "@/api/access-requests/routes"
+import sessionsRoutes from "@/api/sessions/routes"
 
 const routes = [
   {
@@ -10,6 +15,11 @@ const routes = [
   },
   ...dashboardRoutes,
   ...employeeRoutes,
+  ...resourcesRoutes,
+  ...accountsRoutes,
+  ...rolesRoutes,
+  ...accessRequestsRoutes,
+  ...sessionsRoutes,
 ]
 
 const router = createRouter({
